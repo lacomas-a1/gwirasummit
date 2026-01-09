@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gwira Gwira Creatives Summit & Gala</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #1a5d1a;
+            --light-green: #2e8b2e;
+            --yellow: #ffd700;
+            --dark-yellow: #e6c300;
+            --black: #121212;
+            --gray: #333333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--black);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-left: 10px;
+        }
+        
+        .logo-text span {
+            color: var(--yellow);
+        }
+        
+        .logo-icon {
+            color: var(--yellow);
+            font-size: 1.8rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-green);
+        }
+        
+        nav ul li a.active {
+            color: var(--primary-green);
+        }
+        
+        nav ul li a.active:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--yellow);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            color: var(--yellow);
+        }
+        
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--white);
+        }
+        
+        .date-location {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: var(--white);
+        }
+        
+        .date-location i {
+            color: var(--yellow);
+            margin-right: 10px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-yellow);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+        
+        /* Page Sections */
+        .page-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--yellow);
+        }
+        
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Highlights */
+        .highlights {
+            background-color: var(--light-gray);
+        }
+        
+        .highlight-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .highlight-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary-green);
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .highlight-icon {
+            font-size: 2.5rem;
+            color: var(--yellow);
+            margin-bottom: 20px;
+        }
+        
+        .highlight-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+        
+        /* Program */
+        .program-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+        
+        .program-timeline:before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: var(--yellow);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 70px;
+        }
+        
+        .timeline-date {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        
+        .timeline-content {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-green);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+        
+        /* Partners */
+        .partner-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .partner-category {
+            background-color: var(--light-gray);
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        .partner-category h3 {
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--yellow);
+            padding-bottom: 10px;
+        }
+        
+        /* Committee */
+        .committee-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .committee-member {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--light-gray);
+            border-radius: 8px;
+        }
+        
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: var(--primary-green);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--yellow);
+        }
+        
+        /* Contact */
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .contact-info {
+            background-color: var(--light-gray);
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-detail i {
+            color: var(--yellow);
+            font-size: 1.2rem;
+            width: 30px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-green);
+            color: var(--white);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--yellow);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .contact-form button {
+            background-color: var(--primary-green);
+            color: var(--white);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background-color: var(--light-green);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--yellow);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--yellow);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            nav {
+                width: 100%;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .program-timeline:before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 50px;
+            }
+        }
+        
+        /* Utility Classes */
+        .hidden {
+            display: none;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+        
+        .mt-40 {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon"><i class="fas fa-hands-helping"></i></div>
+                    <div class="logo-text">Gwira<span>Gwira</span></div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#program">Program</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                        <li><a href="#committee">Committee</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Gwira Gwira Creatives Summit & Gala</h1>
+            <div class="tagline">Empowering Creativity, Fostering Collaboration</div>
+            <div class="date-location">
+                <i class="fas fa-calendar-alt"></i> November 15-17, 2023 | 
+                <i class="fas fa-map-marker-alt"></i> Accra International Conference Centre
+            </div>
+            <p class="section-content">A premier gathering of creative minds, industry leaders, and innovators across Africa. Join us for insightful discussions, networking opportunities, and celebration of creative excellence.</p>
+            
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Register Now</a>
+                <a href="#partners" class="btn btn-secondary">Become a Partner</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights page-section">
+        <div class="container">
+            <h2 class="section-title">Summit Highlights</h2>
+            <div class="highlight-cards">
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-users"></i></div>
+                    <h3>Networking</h3>
+                    <p>Connect with creative professionals, industry leaders, and potential collaborators from across Africa.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Innovation</h3>
+                    <p>Explore cutting-edge creative technologies and methodologies shaping the future of the industry.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>Collaboration</h3>
+                    <p>Foster partnerships and collaborative projects that drive creative entrepreneurship forward.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Recognition</h3>
+                    <p>Celebrate creative excellence at the prestigious Gala Night awards ceremony.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page-section">
+        <div class="container">
+            <h2 class="section-title">About the Summit</h2>
+            <div class="section-content">
+                <h3 class="mb-20">Background</h3>
+                <p class="mb-20">The Gwira Gwira Creatives Summit & Gala was conceived as a platform to address the growing need for collaboration and professional development within Africa's creative industries. With the creative sector contributing significantly to GDP across the continent, this summit aims to foster connections and innovation.</p>
+                
+                <h3 class="mb-20">Problem Statement</h3>
+                <p class="mb-20">Africa's creative industries often operate in silos, with limited opportunities for cross-disciplinary collaboration, professional development, and access to markets and funding. This fragmentation limits the sector's potential for growth and global competitiveness.</p>
+                
+                <h3 class="mb-20">Objectives</h3>
+                <ul class="mb-20" style="padding-left: 20px;">
+                    <li>Foster collaboration across creative disciplines</li>
+                    <li>Provide professional development opportunities</li>
+                    <li>Showcase African creative talent to global markets</li>
+                    <li>Create networking platforms for creatives and investors</li>
+                    <li>Advocate for policies supporting creative industries</li>
+                </ul>
+                
+                <h3 class="mb-20">Theme</h3>
+                <p>"Creative Convergence: Bridging Arts, Culture, and Innovation for Sustainable Development"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="page-section" style="background-color: var(--light-gray);">
+        <div class="container">
+            <h2 class="section-title">Program</h2>
+            <div class="program-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Day 1</div>
+                    <div class="timeline-content">
+                        <h3>Gwira Gwira Cancer Awareness Walk</h3>
+                        <p>Join us for a community walk to raise awareness about cancer prevention and support affected creatives. The walk will be followed by health screenings and information sessions.</p>
+                        <p><strong>Time:</strong> 7:00 AM - 10:00 AM</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Day 2</div>
+                    <div class="timeline-content">
+                        <h3>Youth Showcases & Panel Discussions</h3>
+                        <p>A full day of presentations, exhibitions, and discussions featuring emerging creative talent. Panel topics include digital innovation in creativity, sustainable creative businesses, and accessing global markets.</p>
+                        <p><strong>Time:</strong> 9:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Day 3</div>
+                    <div class="timeline-content">
+                        <h3>Gala Night & Awards Ceremony</h3>
+                        <p>A formal celebration of creative excellence featuring award presentations, performances, and networking. Black-tie attire recommended.</p>
+                        <p><strong>Time:</strong> 6:00 PM - 11:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Partners & Participation</h2>
+            <div class="partner-categories">
+                <div class="partner-category">
+                    <h3>Who Can Participate</h3>
+                    <ul>
+                        <li>Creative professionals & artists</li>
+                        <li>Creative enterprises & startups</li>
+                        <li>Investors & venture capitalists</li>
+                        <li>Government agencies</li>
+                        <li>NGOs & development partners</li>
+                        <li>Academic institutions</li>
+                        <li>Media organizations</li>
+                    </ul>
+                </div>
+                <div class="partner-category">
+                    <h3>Partnership Opportunities</h3>
+                    <ul>
+                        <li>Platinum Sponsor (Exclusive)</li>
+                        <li>Gold Sponsor</li>
+                        <li>Silver Sponsor</li>
+                        <li>Media Partner</li>
+                        <li>Community Partner</li>
+                        <li>Exhibition Space</li>
+                        <li>Workshop Facilitator</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-content mt-40">
+                <h3 class="mb-20">Benefits of Participation</h3>
+                <p class="mb-20">Partners gain visibility among Africa's creative community, access to networking opportunities, brand association with a premium creative event, and opportunities to shape the creative industry's future.</p>
+                
+                <h3 class="mb-20">Expression of Interest</h3>
+                <p>Interested in partnering with us? Contact our partnership team through the contact form below or email <strong>partnerships@gwiragwirasummit.org</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Committee Section -->
+    <section id="committee" class="page-section" style="background-color: var(--light-gray);">
+        <div class="container">
+            <h2 class="section-title">Organizing Committee</h2>
+            <div class="committee-members">
+                <div class="committee-member">
+                    <div class="member-avatar"><i class="fas fa-user-tie"></i></div>
+                    <h3>Dr. Kwame Asante</h3>
+                    <p>Chairperson</p>
+                    <p>Creative Industries Consultant</p>
+                </div>
+                <div class="committee-member">
+                    <div class="member-avatar"><i class="fas fa-user-tie"></i></div>
+                    <h3>Ama Serwah</h3>
+                    <p>Vice Chairperson</p>
+                    <p>Director, National Creative Council</p>
+                </div>
+                <div class="committee-member">
+                    <div class="member-avatar"><i class="fas fa-user-tie"></i></div>
+                    <h3>Kofi Mensah</h3>
+                    <p>Secretary</p>
+                    <p>Event Management Specialist</p>
+                </div>
+            </div>
+            
+            <div class="section-content mt-40">
+                <h3 class="mb-20">Governance Overview</h3>
+                <p class="mb-20">The organizing committee operates under a transparent governance structure with clearly defined roles and responsibilities. Regular meetings ensure effective planning and execution of all summit activities.</p>
+                
+                <h3 class="mb-20">Values & Accountability</h3>
+                <p>We are committed to transparency, inclusivity, creativity, and excellence in all our operations. Financial reports and decision-making processes are documented and available to key stakeholders.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Official Contact Details</h3>
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Address</strong><br>
+                            Creative Hub Building,<br>
+                            Liberation Road, Accra, Ghana
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone</strong><br>
+                            +233 24 123 4567
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            info@gwiragwirasummit.org
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px;">Social Media</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="messageForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn" style="background-color: var(--primary-green); color: white; width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Media & Updates</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">Photo Gallery</a></li>
+                        <li><a href="#">Newsletter Signup</a></li>
+                        <li><a href="#">Media Kit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Downloads</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Summit Proposal (PDF)</a></li>
+                        <li><a href="#">Concept Note</a></li>
+                        <li><a href="#">Sponsorship Package</a></li>
+                        <li><a href="#">Event Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Code of Conduct</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Organizer Details</h3>
+                    <p>Gwira Gwira Creatives Summit & Gala is organized by the Creative Development Initiative in partnership with the Ministry of Arts and Culture.</p>
+                    <p>© 2023 Gwira Gwira Summit. All rights reserved.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Designed with <i class="fas fa-heart" style="color: var(--yellow);"></i> for Africa's Creative Community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+            this.innerHTML = nav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : 
+                '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                // Close mobile menu if open
+                if(window.innerWidth <= 768) {
+                    document.getElementById('mainNav').classList.remove('active');
+                    document.getElementById('mobileMenuBtn').innerHTML = '<i class="fas fa-bars"></i>';
+                }
+                
+                // Update active nav link
+                document.querySelectorAll('nav a').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Scroll to target
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form Submission
+        document.getElementById('messageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+        
+        // Highlight active section on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
