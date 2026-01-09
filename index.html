@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gwira Gwira Creatives Summit & Gala</title>
+    <title>Gwira Gwira Creatives Summit & Gala - Kilifi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -222,6 +222,40 @@
             margin: 0 auto;
         }
         
+        /* Impact Stats */
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary-green);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+        
         /* Highlights */
         .highlights {
             background-color: var(--light-gray);
@@ -354,6 +388,54 @@
             color: var(--yellow);
         }
         
+        /* Reviews Section */
+        .reviews-section {
+            background-color: var(--light-gray);
+        }
+        
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .review-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .review-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        
+        .reviewer-info h4 {
+            color: var(--primary-green);
+            margin-bottom: 5px;
+        }
+        
+        .review-stars {
+            color: var(--yellow);
+            margin-bottom: 10px;
+        }
+        
         /* Contact */
         .contact-content {
             display: grid;
@@ -411,7 +493,8 @@
         }
         
         .contact-form input,
-        .contact-form textarea {
+        .contact-form textarea,
+        .contact-form select {
             width: 100%;
             padding: 12px 15px;
             margin-bottom: 20px;
@@ -430,6 +513,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
+            width: 100%;
         }
         
         .contact-form button:hover {
@@ -557,10 +641,6 @@
         }
         
         /* Utility Classes */
-        .hidden {
-            display: none;
-        }
-        
         .text-center {
             text-align: center;
         }
@@ -593,6 +673,7 @@
                         <li><a href="#program">Program</a></li>
                         <li><a href="#partners">Partners</a></li>
                         <li><a href="#committee">Committee</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -603,17 +684,42 @@
     <!-- Home Section -->
     <section id="home" class="hero">
         <div class="container">
-            <h1>Gwira Gwira Creatives Summit & Gala</h1>
-            <div class="tagline">Empowering Creativity, Fostering Collaboration</div>
+            <h1>Gwira Gwira Creative Summit</h1>
+            <div class="tagline">Cancer Walk Awareness & Gala Night</div>
             <div class="date-location">
-                <i class="fas fa-calendar-alt"></i> November 15-17, 2023 | 
-                <i class="fas fa-map-marker-alt"></i> Accra International Conference Centre
+                <i class="fas fa-calendar-alt"></i> 28th & 29th March 2026 | 
+                <i class="fas fa-map-marker-alt"></i> Karisa Maitha Ground & Inkaba Resort, Kilifi
             </div>
-            <p class="section-content">A premier gathering of creative minds, industry leaders, and innovators across Africa. Join us for insightful discussions, networking opportunities, and celebration of creative excellence.</p>
+            <p class="section-content">Empowering Youth Through Culture, Creativity and Health Awareness. Join us for 2 days of creative showcases, community engagement, and celebration of youth talent.</p>
             
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">Register Now</a>
                 <a href="#partners" class="btn btn-secondary">Become a Partner</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="page-section">
+        <div class="container">
+            <h2 class="section-title">Event Impact</h2>
+            <div class="impact-stats">
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Youth to be empowered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Youth-led initiatives showcased</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Days of activities</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">KES 450K</div>
+                    <div class="stat-label">Estimated budget</div>
+                </div>
             </div>
         </div>
     </section>
@@ -625,23 +731,23 @@
             <div class="highlight-cards">
                 <div class="highlight-card">
                     <div class="highlight-icon"><i class="fas fa-users"></i></div>
-                    <h3>Networking</h3>
-                    <p>Connect with creative professionals, industry leaders, and potential collaborators from across Africa.</p>
+                    <h3>Youth Empowerment</h3>
+                    <p>Platform for Kilifi youth to express creativity, develop skills and engage in cultural initiatives.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Health Awareness</h3>
+                    <p>Increase awareness of critical health issues like cancer and ovarian cysts in the community.</p>
                 </div>
                 <div class="highlight-card">
                     <div class="highlight-icon"><i class="fas fa-lightbulb"></i></div>
-                    <h3>Innovation</h3>
-                    <p>Explore cutting-edge creative technologies and methodologies shaping the future of the industry.</p>
+                    <h3>Creative Economy</h3>
+                    <p>Showcase youth entrepreneurship, innovation, and talent in the creative industries.</p>
                 </div>
                 <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-hands-helping"></i></div>
-                    <h3>Collaboration</h3>
-                    <p>Foster partnerships and collaborative projects that drive creative entrepreneurship forward.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-trophy"></i></div>
-                    <h3>Recognition</h3>
-                    <p>Celebrate creative excellence at the prestigious Gala Night awards ceremony.</p>
+                    <div class="highlight-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Networking</h3>
+                    <p>Facilitate mentorship, networking, and potential funding opportunities for youth.</p>
                 </div>
             </div>
         </div>
@@ -650,25 +756,21 @@
     <!-- About Section -->
     <section id="about" class="page-section">
         <div class="container">
-            <h2 class="section-title">About the Summit</h2>
+            <h2 class="section-title">About the Event</h2>
             <div class="section-content">
-                <h3 class="mb-20">Background</h3>
-                <p class="mb-20">The Gwira Gwira Creatives Summit & Gala was conceived as a platform to address the growing need for collaboration and professional development within Africa's creative industries. With the creative sector contributing significantly to GDP across the continent, this summit aims to foster connections and innovation.</p>
-                
-                <h3 class="mb-20">Problem Statement</h3>
-                <p class="mb-20">Africa's creative industries often operate in silos, with limited opportunities for cross-disciplinary collaboration, professional development, and access to markets and funding. This fragmentation limits the sector's potential for growth and global competitiveness.</p>
+                <h3 class="mb-20">Executive Summary</h3>
+                <p class="mb-20">The Gwira Gwira Creative Summit, Cancer Walk Awareness & Gala Night is a 2-day event designed to empower youth through culture, creative activities and social impact initiatives.</p>
                 
                 <h3 class="mb-20">Objectives</h3>
                 <ul class="mb-20" style="padding-left: 20px;">
-                    <li>Foster collaboration across creative disciplines</li>
-                    <li>Provide professional development opportunities</li>
-                    <li>Showcase African creative talent to global markets</li>
-                    <li>Create networking platforms for creatives and investors</li>
-                    <li>Advocate for policies supporting creative industries</li>
+                    <li>Empower youth through culture, arts, and creativity</li>
+                    <li>Showcase youth entrepreneurship, innovation, and talent</li>
+                    <li>Facilitate mentorship, networking, and potential funding opportunities</li>
+                    <li>Align with government initiatives on youth empowerment</li>
                 </ul>
                 
                 <h3 class="mb-20">Theme</h3>
-                <p>"Creative Convergence: Bridging Arts, Culture, and Innovation for Sustainable Development"</p>
+                <p>"Empowering Youth Through Culture, Creativity and Health Awareness"</p>
             </div>
         </div>
     </section>
@@ -681,25 +783,27 @@
                 <div class="timeline-item">
                     <div class="timeline-date">Day 1</div>
                     <div class="timeline-content">
-                        <h3>Gwira Gwira Cancer Awareness Walk</h3>
-                        <p>Join us for a community walk to raise awareness about cancer prevention and support affected creatives. The walk will be followed by health screenings and information sessions.</p>
-                        <p><strong>Time:</strong> 7:00 AM - 10:00 AM</p>
+                        <h3>Cancer Walk Awareness Summit</h3>
+                        <p>Community fun walk, interactive workshops along the walk (music, art, wellness), live performances from the youth, and networking opportunities.</p>
+                        <p><strong>Time:</strong> 8:00 AM - 12:00 Noon</p>
+                        <p><strong>Venue:</strong> Karisa Maitha Ground</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">Day 2</div>
                     <div class="timeline-content">
-                        <h3>Youth Showcases & Panel Discussions</h3>
-                        <p>A full day of presentations, exhibitions, and discussions featuring emerging creative talent. Panel topics include digital innovation in creativity, sustainable creative businesses, and accessing global markets.</p>
-                        <p><strong>Time:</strong> 9:00 AM - 5:00 PM</p>
+                        <h3>Youth Showcasing</h3>
+                        <p>Youth exhibitions, workshops & mentorship, talent showcase, panel discussion with youth leaders, creatives, and health experts.</p>
+                        <p><strong>Time:</strong> 10:00 AM - 4:00 PM</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">Day 3</div>
+                    <div class="timeline-date">Day 2 Evening</div>
                     <div class="timeline-content">
-                        <h3>Gala Night & Awards Ceremony</h3>
-                        <p>A formal celebration of creative excellence featuring award presentations, performances, and networking. Black-tie attire recommended.</p>
-                        <p><strong>Time:</strong> 6:00 PM - 11:00 PM</p>
+                        <h3>Gala Night</h3>
+                        <p>VIP reception, keynote speech by PS Youth & Creative Economy, performances, networking dinner, and awards ceremony.</p>
+                        <p><strong>Time:</strong> 6:00 PM - 10:00 PM</p>
+                        <p><strong>Venue:</strong> Inkaba Resort</p>
                     </div>
                 </div>
             </div>
@@ -714,13 +818,11 @@
                 <div class="partner-category">
                     <h3>Who Can Participate</h3>
                     <ul>
-                        <li>Creative professionals & artists</li>
-                        <li>Creative enterprises & startups</li>
-                        <li>Investors & venture capitalists</li>
-                        <li>Government agencies</li>
-                        <li>NGOs & development partners</li>
-                        <li>Academic institutions</li>
-                        <li>Media organizations</li>
+                        <li>Youth (15–35 years)</li>
+                        <li>Creatives: Musicians, artists, tech innovators</li>
+                        <li>Government representatives</li>
+                        <li>Sponsors: Corporates, NGOs, partners</li>
+                        <li>Media partners</li>
                     </ul>
                 </div>
                 <div class="partner-category">
@@ -731,18 +833,8 @@
                         <li>Silver Sponsor</li>
                         <li>Media Partner</li>
                         <li>Community Partner</li>
-                        <li>Exhibition Space</li>
-                        <li>Workshop Facilitator</li>
                     </ul>
                 </div>
-            </div>
-            
-            <div class="section-content mt-40">
-                <h3 class="mb-20">Benefits of Participation</h3>
-                <p class="mb-20">Partners gain visibility among Africa's creative community, access to networking opportunities, brand association with a premium creative event, and opportunities to shape the creative industry's future.</p>
-                
-                <h3 class="mb-20">Expression of Interest</h3>
-                <p>Interested in partnering with us? Contact our partnership team through the contact form below or email <strong>partnerships@gwiragwirasummit.org</strong></p>
             </div>
         </div>
     </section>
@@ -754,30 +846,84 @@
             <div class="committee-members">
                 <div class="committee-member">
                     <div class="member-avatar"><i class="fas fa-user-tie"></i></div>
-                    <h3>Dr. Kwame Asante</h3>
-                    <p>Chairperson</p>
-                    <p>Creative Industries Consultant</p>
+                    <h3>Nomad Tours</h3>
+                    <p>Event Organizer</p>
+                    <p>Co-Prepared the Proposal</p>
                 </div>
                 <div class="committee-member">
                     <div class="member-avatar"><i class="fas fa-user-tie"></i></div>
-                    <h3>Ama Serwah</h3>
-                    <p>Vice Chairperson</p>
-                    <p>Director, National Creative Council</p>
+                    <h3>Gwira Gwira</h3>
+                    <p>Event Organizer</p>
+                    <p>Co-Prepared the Proposal</p>
                 </div>
                 <div class="committee-member">
                     <div class="member-avatar"><i class="fas fa-user-tie"></i></div>
-                    <h3>Kofi Mensah</h3>
-                    <p>Secretary</p>
-                    <p>Event Management Specialist</p>
+                    <h3>County Officials</h3>
+                    <p>Government Liaison</p>
+                    <p>Kilifi County Representatives</p>
                 </div>
             </div>
-            
-            <div class="section-content mt-40">
-                <h3 class="mb-20">Governance Overview</h3>
-                <p class="mb-20">The organizing committee operates under a transparent governance structure with clearly defined roles and responsibilities. Regular meetings ensure effective planning and execution of all summit activities.</p>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section page-section">
+        <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">J</div>
+                        <div class="reviewer-info">
+                            <h4>James Mwangi</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>Youth Entrepreneur</p>
+                        </div>
+                    </div>
+                    <p>"This summit gave me the platform to showcase my art and connect with mentors who have helped grow my business. Life-changing experience!"</p>
+                </div>
                 
-                <h3 class="mb-20">Values & Accountability</h3>
-                <p>We are committed to transparency, inclusivity, creativity, and excellence in all our operations. Financial reports and decision-making processes are documented and available to key stakeholders.</p>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">S</div>
+                        <div class="reviewer-info">
+                            <h4>Sarah Atieno</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>Community Health Worker</p>
+                        </div>
+                    </div>
+                    <p>"Combining creativity with health awareness is brilliant! The cancer walk brought our community together in a meaningful way."</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">M</div>
+                        <div class="reviewer-info">
+                            <h4>Michael Otieno</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>Event Sponsor</p>
+                        </div>
+                    </div>
+                    <p>"As a sponsor, I was impressed by the organization and the genuine impact on Kilifi youth. Will definitely partner again next year!"</p>
+                </div>
             </div>
         </div>
     </section>
@@ -788,48 +934,54 @@
             <h2 class="section-title">Contact Us</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Official Contact Details</h3>
+                    <h3>Event Details</h3>
+                    <div class="contact-detail">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <strong>Dates:</strong><br>
+                            28th & 29th March 2026
+                        </div>
+                    </div>
                     <div class="contact-detail">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <strong>Address</strong><br>
-                            Creative Hub Building,<br>
-                            Liberation Road, Accra, Ghana
+                            <strong>Venues:</strong><br>
+                            Karisa Maitha Ground &<br>
+                            Inkaba Resort, Kilifi
                         </div>
                     </div>
                     <div class="contact-detail">
-                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-users"></i>
                         <div>
-                            <strong>Phone</strong><br>
-                            +233 24 123 4567
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>Email</strong><br>
-                            info@gwiragwirasummit.org
+                            <strong>Organizers:</strong><br>
+                            Nomad Tours & Gwira Gwira
                         </div>
                     </div>
                     
                     <h3 style="margin-top: 30px;">Social Media</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Send us a Message</h3>
+                    <h3>Register or Get in Touch</h3>
                     <form id="messageForm">
                         <input type="text" placeholder="Your Name" required>
                         <input type="email" placeholder="Your Email" required>
-                        <input type="text" placeholder="Subject" required>
+                        <select required>
+                            <option value="">Select Interest</option>
+                            <option value="participant">Youth Participant</option>
+                            <option value="exhibitor">Exhibitor / Performer</option>
+                            <option value="sponsor">Sponsor / Partner</option>
+                            <option value="volunteer">Volunteer</option>
+                            <option value="other">Other</option>
+                        </select>
                         <textarea rows="5" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn" style="background-color: var(--primary-green); color: white; width: 100%;">Send Message</button>
+                        <button type="submit">Submit</button>
                     </form>
                 </div>
             </div>
@@ -841,21 +993,20 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Media & Updates</h3>
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Press Releases</a></li>
-                        <li><a href="#">Photo Gallery</a></li>
-                        <li><a href="#">Newsletter Signup</a></li>
-                        <li><a href="#">Media Kit</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#program">Program</a></li>
+                        <li><a href="#partners">Partners</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Downloads</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Summit Proposal (PDF)</a></li>
-                        <li><a href="#">Concept Note</a></li>
-                        <li><a href="#">Sponsorship Package</a></li>
                         <li><a href="#">Event Program</a></li>
+                        <li><a href="#">Sponsorship Package</a></li>
+                        <li><a href="#">Volunteer Form</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -863,19 +1014,18 @@
                     <ul class="footer-links">
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Code of Conduct</a></li>
-                        <li><a href="#">Accessibility</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Organizer Details</h3>
-                    <p>Gwira Gwira Creatives Summit & Gala is organized by the Creative Development Initiative in partnership with the Ministry of Arts and Culture.</p>
-                    <p>© 2023 Gwira Gwira Summit. All rights reserved.</p>
+                    <p>Gwira Gwira Creative Summit, Cancer Walk Awareness & Gala Night is organized by Nomad Tours in partnership with Gwira Gwira.</p>
+                    <p>© 2026 Gwira Gwira Summit. All rights reserved.</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>Designed with <i class="fas fa-heart" style="color: var(--yellow);"></i> for Africa's Creative Community</p>
+                <p>Empowering Youth Through Culture, Creativity and Health Awareness</p>
+                <p>#GwiraGwiraYouth #KilifiYouth #EmpoweringYouth</p>
             </div>
         </div>
     </footer>
@@ -921,7 +1071,7 @@
         // Form Submission
         document.getElementById('messageForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
+            alert('Thank you for your interest in the Gwira Gwira Creative Summit! We will contact you soon.');
             this.reset();
         });
         
