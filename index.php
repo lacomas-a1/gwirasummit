@@ -1,9 +1,14 @@
 <?php
 // Database configuration
 $host = 'localhost';
-$dbname = 'gwira_gwira_db';
-$username = 'root'; // Change this to your MySQL username
-$password = ''; // Change this to your MySQL password
+$dbname = 'gwiragwi_gwira';
+$username = 'gwiragwi_gwira'; // Change this to your MySQL username
+$password = 'd7c2AfgkNnx7GBR698Sa'; // Change this to your MySQL password
+
+// $host = 'localhost';
+// $dbname = 'gwira_gwira_db';
+// $username = 'root'; // Change this to your MySQL username
+// $password = ''; // Change this to your MySQL password
 
 // Create connection
 try {
