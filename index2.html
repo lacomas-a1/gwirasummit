@@ -509,166 +509,6 @@
             transform: rotate(45deg);
         }
         
-        /* Reviews Section */
-        .reviews-section {
-            background-color: var(--light-gray);
-        }
-        
-        .reviews-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .review-card {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            position: relative;
-        }
-        
-        .review-card.new-review {
-            border: 2px solid var(--yellow);
-            animation: fadeIn 0.5s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .review-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .review-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: var(--primary-green);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.5rem;
-            margin-right: 15px;
-        }
-        
-        .reviewer-info h4 {
-            color: var(--primary-green);
-            margin-bottom: 5px;
-        }
-        
-        .review-stars {
-            color: var(--yellow);
-            margin-bottom: 10px;
-        }
-        
-        .review-date {
-            color: var(--gray);
-            font-size: 0.8rem;
-            margin-top: 10px;
-        }
-        
-        /* Submit Review Section */
-        .submit-review-section {
-            background-color: var(--white);
-            margin-top: 60px;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .submit-review-section h3 {
-            color: var(--primary-green);
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 1.8rem;
-        }
-        
-        .review-form {
-            display: grid;
-            gap: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .form-group label {
-            margin-bottom: 8px;
-            color: var(--gray);
-            font-weight: 600;
-        }
-        
-        .review-form input,
-        .review-form textarea,
-        .review-form select {
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border 0.3s;
-        }
-        
-        .review-form input:focus,
-        .review-form textarea:focus,
-        .review-form select:focus {
-            outline: none;
-            border-color: var(--primary-green);
-        }
-        
-        .star-rating {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-            gap: 5px;
-            margin-bottom: 10px;
-        }
-        
-        .star-rating input {
-            display: none;
-        }
-        
-        .star-rating label {
-            font-size: 1.8rem;
-            color: #ddd;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-        
-        .star-rating label:hover,
-        .star-rating label:hover ~ label,
-        .star-rating input:checked ~ label {
-            color: var(--yellow);
-        }
-        
-        .review-form button {
-            background-color: var(--primary-green);
-            color: var(--white);
-            border: none;
-            padding: 14px 30px;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-            margin-top: 10px;
-        }
-        
-        .review-form button:hover {
-            background-color: var(--light-green);
-            transform: translateY(-2px);
-        }
-        
         /* Highlights */
         .highlights {
             background-color: var(--light-gray);
@@ -799,6 +639,54 @@
             justify-content: center;
             font-size: 3rem;
             color: var(--yellow);
+        }
+        
+        /* Reviews Section */
+        .reviews-section {
+            background-color: var(--light-gray);
+        }
+        
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .review-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .review-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        
+        .reviewer-info h4 {
+            color: var(--primary-green);
+            margin-bottom: 5px;
+        }
+        
+        .review-stars {
+            color: var(--yellow);
+            margin-bottom: 10px;
         }
         
         /* Contact */
@@ -1021,14 +909,6 @@
             .timeline-item {
                 padding-left: 50px;
             }
-            
-            .submit-review-section {
-                padding: 25px;
-            }
-            
-            .star-rating label {
-                font-size: 1.5rem;
-            }
         }
         
         /* Utility Classes */
@@ -1052,7 +932,7 @@
             <div class="header-content">
                 <div class="logo">
                     <!-- Logo Image -->
-                    <img src="https://i.imgur.com/w6Fj6yS.png" alt="Gwira Gwira Logo" class="logo-img">
+                    <img src="image/logo.jpeg" alt="Gwira Gwira Logo" class="logo-img">
                     <div class="logo-text">Gwira<span>Gwira</span></div>
                 </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -1065,7 +945,6 @@
                         <li><a href="#speakers">Speakers</a></li>
                         <li><a href="#program">Program</a></li>
                         <li><a href="#sponsors">Sponsors</a></li>
-                        <li><a href="#reviews">Reviews</a></li>
                         <li><a href="#faq">FAQ</a></li>
                         <li><a href="#committee">Committee</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -1283,131 +1162,6 @@
         </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section id="reviews" class="reviews-section page-section">
-        <div class="container">
-            <h2 class="section-title">Feedback & Reviews</h2>
-            <p class="text-center mb-20">Hear what past participants, sponsors, and community members say about our events.</p>
-            
-            <div class="reviews-container" id="reviewsContainer">
-                <!-- Reviews will be dynamically added here -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">J</div>
-                        <div class="reviewer-info">
-                            <h4>James Mwangi</h4>
-                            <div class="review-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p>Youth Entrepreneur</p>
-                        </div>
-                    </div>
-                    <p>"This summit gave me the platform to showcase my art and connect with mentors who have helped grow my business. Life-changing experience!"</p>
-                    <div class="review-date">Posted: March 15, 2025</div>
-                </div>
-                
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">S</div>
-                        <div class="reviewer-info">
-                            <h4>Sarah Atieno</h4>
-                            <div class="review-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p>Community Health Worker</p>
-                        </div>
-                    </div>
-                    <p>"Combining creativity with health awareness is brilliant! The cancer walk brought our community together in a meaningful way."</p>
-                    <div class="review-date">Posted: February 28, 2025</div>
-                </div>
-                
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">M</div>
-                        <div class="reviewer-info">
-                            <h4>Michael Otieno</h4>
-                            <div class="review-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <p>Event Sponsor</p>
-                        </div>
-                    </div>
-                    <p>"As a sponsor, I was impressed by the organization and the genuine impact on Kilifi youth. Will definitely partner again next year!"</p>
-                    <div class="review-date">Posted: January 10, 2025</div>
-                </div>
-            </div>
-            
-            <!-- Submit Review Form -->
-            <div class="submit-review-section">
-                <h3>Share Your Experience</h3>
-                <p class="text-center mb-20">Attended our previous events? We'd love to hear your feedback!</p>
-                
-                <form class="review-form" id="reviewForm">
-                    <div class="form-group">
-                        <label for="reviewerName">Your Name *</label>
-                        <input type="text" id="reviewerName" placeholder="Enter your name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="reviewerRole">Your Role / Profession</label>
-                        <input type="text" id="reviewerRole" placeholder="e.g., Youth Participant, Sponsor, Volunteer">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Rating *</label>
-                        <div class="star-rating">
-                            <input type="radio" id="star5" name="rating" value="5" required>
-                            <label for="star5" title="5 stars">★</label>
-                            <input type="radio" id="star4" name="rating" value="4">
-                            <label for="star4" title="4 stars">★</label>
-                            <input type="radio" id="star3" name="rating" value="3">
-                            <label for="star3" title="3 stars">★</label>
-                            <input type="radio" id="star2" name="rating" value="2">
-                            <label for="star2" title="2 stars">★</label>
-                            <input type="radio" id="star1" name="rating" value="1">
-                            <label for="star1" title="1 star">★</label>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="reviewTitle">Review Title *</label>
-                        <input type="text" id="reviewTitle" placeholder="Summarize your experience" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="reviewText">Your Review *</label>
-                        <textarea id="reviewText" rows="5" placeholder="Share your thoughts about the event, what you enjoyed, suggestions for improvement..." required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="eventAttended">Which event did you attend?</label>
-                        <select id="eventAttended">
-                            <option value="">Select Event</option>
-                            <option value="2024">Gwira Gwira Summit 2024</option>
-                            <option value="2023">Gwira Gwira Summit 2023</option>
-                            <option value="other">Other Community Event</option>
-                            <option value="first">This will be my first time</option>
-                        </select>
-                    </div>
-                    
-                    <button type="submit">Submit Review</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ Section -->
     <section id="faq" class="faq-section page-section">
         <div class="container">
@@ -1466,7 +1220,7 @@
         </div>
     </section>
 
-    <!-- Rest of the existing sections (About, Program, Committee, Contact) remain exactly the same -->
+    <!-- Rest of the existing sections (About, Program, Committee, Reviews, Contact) remain exactly the same -->
     <!-- About Section -->
     <section id="about" class="page-section">
         <div class="container">
@@ -1637,7 +1391,6 @@
                         <li><a href="#speakers">Speakers</a></li>
                         <li><a href="#program">Program</a></li>
                         <li><a href="#sponsors">Sponsors</a></li>
-                        <li><a href="#reviews">Reviews</a></li>
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
@@ -1721,83 +1474,6 @@
             });
         });
         
-        // Review Submission
-        document.getElementById('reviewForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('reviewerName').value;
-            const role = document.getElementById('reviewerRole').value || 'Participant';
-            const rating = document.querySelector('input[name="rating"]:checked').value;
-            const title = document.getElementById('reviewTitle').value;
-            const text = document.getElementById('reviewText').value;
-            const eventAttended = document.getElementById('eventAttended').value;
-            
-            // Get first letter for avatar
-            const firstLetter = name.charAt(0).toUpperCase();
-            
-            // Create stars HTML
-            let starsHTML = '';
-            const fullStars = Math.floor(rating);
-            const hasHalfStar = rating % 1 !== 0;
-            
-            for (let i = 0; i < 5; i++) {
-                if (i < fullStars) {
-                    starsHTML += '<i class="fas fa-star"></i>';
-                } else if (i === fullStars && hasHalfStar) {
-                    starsHTML += '<i class="fas fa-star-half-alt"></i>';
-                } else {
-                    starsHTML += '<i class="far fa-star"></i>';
-                }
-            }
-            
-            // Create date string
-            const now = new Date();
-            const dateString = now.toLocaleDateString('en-US', { 
-                month: 'long', 
-                day: 'numeric', 
-                year: 'numeric' 
-            });
-            
-            // Create review card HTML
-            const reviewHTML = `
-                <div class="review-card new-review">
-                    <div class="review-header">
-                        <div class="review-avatar">${firstLetter}</div>
-                        <div class="reviewer-info">
-                            <h4>${name}</h4>
-                            <div class="review-stars">
-                                ${starsHTML}
-                            </div>
-                            <p>${role}</p>
-                        </div>
-                    </div>
-                    <h4 style="color: var(--primary-green); margin-bottom: 10px;">${title}</h4>
-                    <p>${text}</p>
-                    <div class="review-date">Posted: ${dateString}</div>
-                </div>
-            `;
-            
-            // Add new review to the top of the reviews container
-            const reviewsContainer = document.getElementById('reviewsContainer');
-            reviewsContainer.insertAdjacentHTML('afterbegin', reviewHTML);
-            
-            // Show success message
-            alert('Thank you for sharing your feedback! Your review has been submitted.');
-            
-            // Reset form
-            this.reset();
-            
-            // Scroll to the new review
-            const newReview = document.querySelector('.new-review');
-            newReview.scrollIntoView({ behavior: 'smooth' });
-            
-            // Remove the new-review class after animation
-            setTimeout(() => {
-                newReview.classList.remove('new-review');
-            }, 1000);
-        });
-        
         // Smooth Scrolling for Navigation Links
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', function(e) {
@@ -1826,7 +1502,7 @@
             });
         });
         
-        // Registration Form Submission
+        // Form Submission
         document.getElementById('messageForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for registering for the Gwira Gwira Creative Summit! A confirmation email will be sent to you shortly.');
