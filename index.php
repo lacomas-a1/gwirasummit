@@ -1496,8 +1496,6 @@ $reviews = $reviews_stmt->fetchAll(PDO::FETCH_ASSOC);
                         <label for="eventAttended">Which event did you attend?</label>
                         <select id="eventAttended" name="eventAttended">
                             <option value="">Select Event</option>
-                            <option value="2024">Gwira Gwira Summit 2024</option>
-                            <option value="2023">Gwira Gwira Summit 2023</option>
                             <option value="other">Other Community Event</option>
                             <option value="first">This will be my first time</option>
                         </select>
